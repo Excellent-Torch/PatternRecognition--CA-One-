@@ -60,11 +60,11 @@ h1, h2 {
   margin-bottom: 5px;
   font-weight: normal;
   text-align: center;
-  color:#aaa;
+  color:#ffffff;
 }
 h2 {
   margin: 5px 0 2em;
-  color: #1ABC9C;
+  color: #ffffff;
 }
 form {
   width: 225px;
@@ -86,4 +86,8 @@ h2 + P {
 .copy a {
   text-decoration: none;
   color: #1ABC9C;
+}
+input[type="text"], textarea {
+
+  background-color : #728FCE; 
 }

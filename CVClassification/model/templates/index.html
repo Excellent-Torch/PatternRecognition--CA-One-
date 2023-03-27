@@ -70,23 +70,29 @@
         	<div class="spacing"></div>
         	<div class="row">
         	 
-					<h1>CV Grading</h1>
+					<h1>IMDB Movie Review Classification</h1>
   					<h2>With Machine Learning</h2>
 
     				<form action="{{ url_for('getprediction')}}"method="post" enctype="multipart/form-data">
 
     					<div class="input-file-container">  
-          				<input class="input-file" id="my-file" type="file" name="file_name" multiple="true">
-          				<label tabindex="0" for="my-file" class="input-file-trigger">Select a CV..</label>
+          				  <input class="input-file" id="my-file" type="file" name="file_name" multiple="true">
+          				  <label tabindex="0" for="my-file" class="input-file-trigger">Upload CSV</label>                       
       					</div>
+                        <div>
+                                <label for="test_s">Train Data Size:</label>
+                                <input type="text" id='train_s'  name="train_size" required="required" />
+                                <br>
+                                <label for="test_s">Test Size:</label>
+                                <input type="text" id='test_s'  name="test_size" required="required" />                            
+                        </div>
       					<!--<p class="file-return"></p>-->
                         <br>
-                        <input type="submit" value="Upload"  class="span2" style="background-color: gray; height:45px; width:100px;">
+                        <input type="submit" value="Train"  class="span2" style="background-color: gray; height:45px; width:100px;">
     				</form>  					
    				<p class="txtcenter">{{ output }}</p>
 
-   				<p class="txtcenter">Please make sure to upload a docx/text file.<br />Works on IE &gt; 8 and modern browsers</p>
-   				<p class="txtcenter copy">By Ishan <br />
+                
                 <br>
                 <br>
                 <br>
@@ -102,12 +108,11 @@
         <div class="container">            
             <div class="row">
                 <div class="col-xs-12 col-sm-12 col-md-6 wow fadeInDown animated" data-wow-delay=".5s">
-                   <h2>About Us</h2>
-				   <p>We help you shortlist the best CVs. </p>
-				   <p>The best tool you'll need to be more productive and work smarter with the recruitment process.</p>
+                   <h2>About IMDB</h2>
+				   <p>IMDb is an online database of information related to films, television series, podcasts, home videos, video games, and streaming content online – including cast, production crew and personal biographies, plot summaries, trivia, ratings, and fan and critical reviews.</p>
                   </div>
                   <div class="col-xs-12 col-sm-12 col-md-6 wow fadeInRight animated" data-wow-delay=".5s">
-                     <img src="{{ url_for('static',filename='assets/img/about-img.jpg')}}" width="950" height="550" />               
+                     <img src="{{ url_for('static',filename='assets/img/big-imdb.png')}}" width="950" height="550" />               
                   </div>     
             </div>
         </div>   
